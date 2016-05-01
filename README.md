@@ -53,6 +53,6 @@ ex.  "humix-pi2"
 ~~" humix_pi2 "~~  <br>
 > <img border="0" height="261" src="https://4.bp.blogspot.com/-FnDlP-R_Pys/VxEkp35cuEI/AAAAAAAAAGQ/VK_fj1syLIcVxQPc9qwWPf-H_lXTbWi_gCLcB/s400/humix-name.png" width="400" />
 
-c. < install cf-cli client > 
-安裝 cf-cli後 ，可利用command line登入bluemix帳號及將創好的app發佈到bluemix上.
-下載地址 : https://github.com/cloudfoundry/cli
+c. < install cf-cli client >  <br>
+安裝 cf-cli後 ，可利用command line登入bluemix帳號及將創好的app發佈到bluemix上. <br>
+下載地址 : https://github.com/cloudfoundry/cli <br>
