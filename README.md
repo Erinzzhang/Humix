@@ -1,4 +1,4 @@
-#  Humix - start with Raspberry Pi 3 
+# Humix 設定指南
 
 #### Humix 主架構  ---- 分為兩大部份(think、sense)
 
@@ -13,6 +13,15 @@
 > **< Note >** <br> 
 > 因為"Humix Think"是個app，所以一個think可搭配多個sence，也就是說，一個app可接收多個機器人(Humix)資訊的意思!! <br>
 
+## 硬體需求
+    1. Raspberry Pi/Pi2/Pi3  (or 任何可執行 Node.js 4.2.x+ 的開發板)
+    2. Micro SD 卡
+    3. USB Sound Card
+    4. Microphone 
+    5. Speaker 
+    6. PL2303HXD USB轉TTL序列傳輸線 (可用來登入Ri3，進行網路設定)
+    
+## 軟體設定
 ##1.    Humix Think 設定
 -   Enable Humix Think  <br>
 
@@ -99,13 +108,12 @@ e. 確認剛剛建立的"humix-think"可以運作 <br>
 下載humix的映像檔，並解壓縮燒錄至 SD card 中(映像檔包含RPi 3的作業系統Raspbian Jessie、humix-ng) <br>
 下載地址：[humix.img](http://119.81.185.45/humix_image/20160330-humix-jessie-alpha.img.gz) <br>
 ##### step2. 連線登入RPi 3 (RPi 3) <br>
-接著，利用USB-Serial-Cable 及Putty，連線登入Pi 3。 <br>
+接著，利用USB-Serial-Cable 及[Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)，連線登入Pi 3。 <br>
 使用者"pi"，密碼為"raspberry" <br>
 > < Note >第一次登入時，會發現有亂碼的產生，Why?!! <br>
  REF: 
 - [[基礎] 從序列埠登入到 Raspberry Pi](https://www.raspberrypi.com.tw/1999/connect-to-raspberry-pi-via-serial/) <br>
-- [常見問與答] 解決從序列埠登入到 Pi 3 的亂碼問題 <br>
-https://www.raspberrypi.com.tw/10842/raspberry-pi-3-uart-overlay-workaround/   <br>
+- [[常見問與答] 解決從序列埠登入到 Pi 3 的亂碼問題](https://www.raspberrypi.com.tw/10842/raspberry-pi-3-uart-overlay-workaround/)   <br>
 - RPi wi-fi 設定: 
 [[基礎] 命令列設置無線網路](https://www.raspberrypi.com.tw/2152/setting-up-wifi-with-the-command-line/)
 
@@ -127,9 +135,8 @@ network={
 sudo ifup wlan0 </pre>
 查看RPi 的IP
 <pre>ifconfig </pre>
-利用[Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)設定ip，以 wi-fi 重新連線進入RPi 3 <br>
+利用Putty，設定好ip，以 wi-fi 重新連線進入RPi 3 後，就可以開始設定humix sense了！ <br>
 
-成功登入Pi 3完成wi-fi連線的設定後，就可以開始設定humix sense了！ <br>
 ##### step3. 更改 Humix Sense Config 設定 (RPi 3)
 <pre>cd ~/humix-ng/sense/
 vi config.js </pre>
