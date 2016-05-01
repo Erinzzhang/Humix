@@ -89,11 +89,10 @@ e. 確認剛剛建立的"humix-think"可以運作 <br>
 如果成功了，可以看到下面的網頁畫面,同時，也可以先添加好Humix的SenceID <br>
 <img border="0" height="227" src="https://3.bp.blogspot.com/-ntpV9i7u44g/VxEyXVlCufI/AAAAAAAAAG4/dSGYiqs_ZGIpSqAPBB2aHZlZyt9NkjKgwCLcB/s400/humix-pi2-addsense.png" width="400" />
 
-成功將humix的"大腦"(app)送到bluemix平台之後，接著就是在RPi 3登場的時刻！
+成功將humix的"大腦"(app)送到bluemix平台之後，接著就是在RPi 3登場的時刻！<br>
 
--   Enable Humix Sense
-
-## 2.   Humix Sense設定 
-#####   step1. 下載並解壓縮"humix.img"至SD card (RPi 3) <br>
+## 2.   Humix Sense設定 <br>
+- Enable Humix Sense <br>
+    ##### step1. 下載並解壓縮"humix.img"至SD card (RPi 3) <br>
 下載humix的映像檔，並解壓縮燒錄至 SD card 中(映像檔包含RPi 3的作業系統Raspbian Jessie、humix-ng) <br>
 下載地址：[humix.img](http://119.81.185.45/humix_image/20160330-humix-jessie-alpha.img.gz)
