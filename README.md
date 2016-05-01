@@ -15,12 +15,13 @@
 
 ##1.    Humix Think 設定
 
--   Enable Humix Think  
-    ##### step1.  申請/登入 Bluemix account (本機端) <br>
+-   Enable Humix Think  <br>
+
+##### step1.  申請/登入 Bluemix account (本機端) <br>
         登入bluemix後需更改"Region"。將Region設定在"美國南部"！！ <br>
 <img border="0" height="303" src="https://1.bp.blogspot.com/-wnsU8Sj6xyI/Vw81z3pRSlI/AAAAAAAAABs/PtqygkrMWAowDsHq5ZqtZ5cmM_WLuc7-gCLcB/s400/IBM%2BBluemix%2B-region2.png" width="400" />
 
-    ##### step2.  Humix Think 設定 (本機端) <br>
+##### step2.  Humix Think 設定 (本機端) <br>
 因為 humix think 主要運作於IBM Bluemix平台上，所以想要 enable humix的"大腦"，這個步驟要在本機端做操作。 <br>
 a. 將"humix-ng" 從github clone到本機端後做相關設定。
 <pre>git clone https://github.com/project-humix/humix-ng.git </pre>
@@ -96,9 +97,8 @@ e. 確認剛剛建立的"humix-think"可以運作 <br>
 
 ##### step1. 下載並解壓縮"humix.img"至SD card (RPi 3) <br>
 下載humix的映像檔，並解壓縮燒錄至 SD card 中(映像檔包含RPi 3的作業系統Raspbian Jessie、humix-ng) <br>
-下載地址：[humix.img](http://119.81.185.45/humix_image/20160330-humix-jessie-alpha.img.gz)
-
-##### step2 連線登入RPi 3 (RPi 3)
+下載地址：[humix.img](http://119.81.185.45/humix_image/20160330-humix-jessie-alpha.img.gz) <br>
+##### step2 連線登入RPi 3 (RPi 3) <br>
 接著，利用USB-Serial-Cable ，連線登入Pi 3。 <br>
 使用者"pi"，密碼為"raspberry" <br>
 > < Note >第一次登入時，會發現有亂碼的產生，Why?!! <br>
@@ -126,4 +126,9 @@ network={
 sudo ifup wlan0 </pre>
 查看RPi 的IP
 <pre>ifconfig </pre>
-利用[Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)設定ip，以 wi-fi 重新連線進入RPi 3
+利用[Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)設定ip，以 wi-fi 重新連線進入RPi 3 <br>
+
+成功登入Pi 3完成wi-fi連線的設定後，就可以開始設定humix sense了！ <br>
+##### step3 更改 Humix Sense Config 設定 (RPi 3)
+<pre>cd ~/humix-ng/sense/
+vi config.js </pre>
