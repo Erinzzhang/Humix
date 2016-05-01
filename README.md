@@ -92,7 +92,38 @@ e. 確認剛剛建立的"humix-think"可以運作 <br>
 成功將humix的"大腦"(app)送到bluemix平台之後，接著就是在RPi 3登場的時刻！<br>
 
 ## 2.   Humix Sense設定 
--Enable Humix Sense <br>
+- Enable Humix Sense <br>
+
 ##### step1. 下載並解壓縮"humix.img"至SD card (RPi 3) <br>
 下載humix的映像檔，並解壓縮燒錄至 SD card 中(映像檔包含RPi 3的作業系統Raspbian Jessie、humix-ng) <br>
 下載地址：[humix.img](http://119.81.185.45/humix_image/20160330-humix-jessie-alpha.img.gz)
+
+##### step2 連線登入RPi 3 (RPi 3)
+接著，利用USB-Serial-Cable ，連線登入Pi 3。 <br>
+使用者"pi"，密碼為"raspberry" <br>
+> < Note >第一次登入時，會發現有亂碼的產生，Why?!! <br>
+ REF: 
+- [常見問與答] 解決從序列埠登入到 Pi 3 的亂碼問題 <br>
+https://www.raspberrypi.com.tw/10842/raspberry-pi-3-uart-overlay-workaround/   <br>
+- RPi wi-fi 設定: 
+[[基礎] 命令列設置無線網路](https://www.raspberrypi.com.tw/2152/setting-up-wifi-with-the-command-line/)
+
+Connect Wi-fi in RPI
+<pre>sudo vi /etc/wpa_supplicant/wpa_supplicant.conf</pre>
+進入wpa_supplicant.conf後，添加設定如下
+```
+network={
+  ssid="AP_name"             # 基地台名稱
+  psk="AP_password"          # 密碼
+  proto=RSN                  # WPA2 加密協定
+  pairwise=CCMP              # WPA2 加密協定
+  key_mgmt=WPA-PSK           # WPA2 金鑰管理協定
+  auth_alg=OPEN              # WPA2 認證演算法
+}
+```
+重新啟動無線網卡
+<pre>sudo ifdown wlan0
+sudo ifup wlan0 </pre>
+查看RPi 的IP
+<pre>ifconfig </pre>
+利用[Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)設定ip，以 wi-fi 重新連線進入RPi 3
