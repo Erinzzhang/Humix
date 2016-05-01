@@ -28,7 +28,7 @@ a. 將"humix-ng" 從github clone到本機端後做相關設定。
 b.  進入"think"資料夾， 更改 manifest.yml 檔案設定
 進入"think"資料夾
 <pre>cd humix-ng/think </pre>
-    更改 manifest.yml 檔案設定，設定屬於自己的 application name ( the name must be unique ) (紅色框框為需要更改的部份) <br>
+更改 manifest.yml 檔案設定，設定屬於自己的 application name ( the name must be unique ) (紅色框框為需要更改的部份) <br>
 <pre>vim manifest.yml </pre>
  <img border="0" height="280" src="https://4.bp.blogspot.com/-DG2AZWai6XI/Vw9RbQ6jfBI/AAAAAAAAACA/Z-qpv-dcEncJl_QmZy2swW_GR8kqD83RACKgB/s400/humix-ng-think_manifest.png" width="400" /> <br>
  <br>
