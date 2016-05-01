@@ -1,4 +1,5 @@
-##  Humix - start with Raspberry Pi 3 (1) Humix Think 設定
+#  Humix - start with Raspberry Pi 3 
+##Humix Think 設定
 ### Humix 主架構  ---- 分為兩大部份(think、sense)
 
 >Humix-ng <br>
