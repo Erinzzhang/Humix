@@ -9,7 +9,7 @@
 - Humix Think 其實就是一個位於Bluemix上的app,此app可結合Bluemix中的各個 API (模組化應用程式介面,ex. Speech to Text ... ),擁有儲存資料、翻譯語音等功能
 - Humix Sense 則是在RPi 中接收"外界"資訊，並與"Think"做連結，將所接收到的資訊傳送到Bluemix上的app(Humix Think)
 
-> < Note > <br> 
+> **< Note >** <br> 
 > 因為"Humix Think"是個app，所以一個think可搭配多個sence，也就是說，一個app可接收多個機器人(Humix)資訊的意思!! <br>
 
 #### 軟體設定
@@ -25,7 +25,7 @@ a. 將"humix-ng" 從github clone到本機端後做相關設定。
 b.  進入"think"資料夾， 更改 manifest.yml 檔案設定
 進入"think"資料夾
 <pre>cd humix-ng/think </pre>
-c.  更改 manifest.yml 檔案設定，設定屬於自己的 application name ( the name must be unique ) (紅色框框為需要更改的部份) <br>
+    更改 manifest.yml 檔案設定，設定屬於自己的 application name ( the name must be unique ) (紅色框框為需要更改的部份) <br>
 <pre>vim manifest.yml </pre>
  <img border="0" height="255" src="https://4.bp.blogspot.com/-DG2AZWai6XI/Vw9RbQ6jfBI/AAAAAAAAACA/Z-qpv-dcEncJl_QmZy2swW_GR8kqD83RACKgB/s400/humix-ng-think_manifest.png" width="400" />
     - example : <br>
@@ -47,3 +47,11 @@ applications:
       - Humix-Speech-Service
       command: node --max-old-space-size=384 app.js --settings ./bluemix-settings.js -v 
  ```
+> **< Note > 命名的限制！！**<br>
+ex.  "humix-pi2" 
+~~" humix_pi2 "~~  <br>
+> <img border="0" height="261" src="https://4.bp.blogspot.com/-FnDlP-R_Pys/VxEkp35cuEI/AAAAAAAAAGQ/VK_fj1syLIcVxQPc9qwWPf-H_lXTbWi_gCLcB/s400/humix-name.png" width="400" />
+
+c. < install cf-cli client > 
+安裝 cf-cli後 ，可利用command line登入bluemix帳號及將創好的app發佈到bluemix上.
+下載地址 : https://github.com/cloudfoundry/cli
