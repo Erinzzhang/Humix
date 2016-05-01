@@ -14,11 +14,11 @@
 
 #### 軟體設定
 -   Enable Humix Think  
-    step1.  申請/登入 Bluemix account (本機端) <br>
+    ##### step1.  申請/登入 Bluemix account (本機端) <br>
         登入bluemix後需更改"Region"。將Region設定在"美國南部"！！ <br>
 <img border="0" height="303" src="https://1.bp.blogspot.com/-wnsU8Sj6xyI/Vw81z3pRSlI/AAAAAAAAABs/PtqygkrMWAowDsHq5ZqtZ5cmM_WLuc7-gCLcB/s400/IBM%2BBluemix%2B-region2.png" width="400" />
 
-    step2.  Humix Think 設定 (本機端) <br>
+    ##### step2.  Humix Think 設定 (本機端) <br>
 因為 humix think 主要運作於IBM Bluemix平台上，所以想要 enable humix的"大腦"，這個步驟要在本機端做操作。 <br>
 a. 將"humix-ng" 從github clone到本機端後做相關設定。
 <pre>git clone https://github.com/project-humix/humix-ng.git </pre>
