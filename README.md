@@ -1,6 +1,6 @@
 #  Humix - start with Raspberry Pi 3 
-##1.    Humix Think 設定
-### Humix 主架構  ---- 分為兩大部份(think、sense)
+
+#### Humix 主架構  ---- 分為兩大部份(think、sense)
 
 >Humix-ng <br>
 |--- Humix Think (以IBM Bluemix為基礎建立Humix的"大腦") <br>
@@ -13,7 +13,8 @@
 > **< Note >** <br> 
 > 因為"Humix Think"是個app，所以一個think可搭配多個sence，也就是說，一個app可接收多個機器人(Humix)資訊的意思!! <br>
 
-#### 軟體設定
+##1.    Humix Think 設定
+
 -   Enable Humix Think  
     ##### step1.  申請/登入 Bluemix account (本機端) <br>
         登入bluemix後需更改"Region"。將Region設定在"美國南部"！！ <br>
@@ -56,3 +57,43 @@ ex.  "humix-pi2"
 c. < install cf-cli client >  <br>
 安裝 cf-cli後 ，可利用command line登入bluemix帳號及將創好的app發佈到bluemix上. <br>
 下載地址 : https://github.com/cloudfoundry/cli <br>
+
+d. 執行 deployThink.sh <br>
+<pre>./deployThink.sh</pre>
+登入bluemix 帳號，選擇space (只有一個space時不用選)
+```
+    API endpoint: https://api.ng.bluemix.net
+    Email> liuch@tw.ibm.com
+    Password>
+
+    Authenticating...
+    OK
+    Targeted org liuch@tw.ibm.com
+    Select a space (or press enter to skip):
+    1. dev
+    2. demo
+    3. personal
+    
+    Space> 1
+
+    Targeted space dev
+    
+    API endpoint:   https://api.ng.bluemix.net (API version: 2.40.0)
+    User:           liuch@tw.ibm.com
+    Org:            liuch@tw.ibm.com
+    Space:          dev
+    Creating service instance Humix-Cloudant-Service in org liuch@tw.ibm.com / space dev as liuch@tw.ibm.com... 
+```
+e. 確認剛剛建立的"humix-think"可以運作 <br>
+**http://< your_app_name >.mybluemix.net** <br>
+如果成功了，可以看到下面的網頁畫面,同時，也可以先添加好Humix的SenceID <br>
+<img border="0" height="227" src="https://3.bp.blogspot.com/-ntpV9i7u44g/VxEyXVlCufI/AAAAAAAAAG4/dSGYiqs_ZGIpSqAPBB2aHZlZyt9NkjKgwCLcB/s400/humix-pi2-addsense.png" width="400" />
+
+成功將humix的"大腦"(app)送到bluemix平台之後，接著就是在RPi 3登場的時刻！
+
+-   Enable Humix Sense
+
+## 2.   Humix Sense設定 
+#####   step1. 下載並解壓縮"humix.img"至SD card (RPi 3) <br>
+下載humix的映像檔，並解壓縮燒錄至 SD card 中(映像檔包含RPi 3的作業系統Raspbian Jessie、humix-ng) <br>
+下載地址：[humix.img](http://119.81.185.45/humix_image/20160330-humix-jessie-alpha.img.gz)
