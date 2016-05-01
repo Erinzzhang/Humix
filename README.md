@@ -14,7 +14,6 @@
 > 因為"Humix Think"是個app，所以一個think可搭配多個sence，也就是說，一個app可接收多個機器人(Humix)資訊的意思!! <br>
 
 ##1.    Humix Think 設定
-
 -   Enable Humix Think  <br>
 
 ##### step1.  申請/登入 Bluemix account (本機端) <br>
@@ -100,10 +99,11 @@ e. 確認剛剛建立的"humix-think"可以運作 <br>
 下載humix的映像檔，並解壓縮燒錄至 SD card 中(映像檔包含RPi 3的作業系統Raspbian Jessie、humix-ng) <br>
 下載地址：[humix.img](http://119.81.185.45/humix_image/20160330-humix-jessie-alpha.img.gz) <br>
 ##### step2. 連線登入RPi 3 (RPi 3) <br>
-接著，利用USB-Serial-Cable ，連線登入Pi 3。 <br>
+接著，利用USB-Serial-Cable 及Putty，連線登入Pi 3。 <br>
 使用者"pi"，密碼為"raspberry" <br>
 > < Note >第一次登入時，會發現有亂碼的產生，Why?!! <br>
  REF: 
+- [[基礎] 從序列埠登入到 Raspberry Pi](https://www.raspberrypi.com.tw/1999/connect-to-raspberry-pi-via-serial/) <br>
 - [常見問與答] 解決從序列埠登入到 Pi 3 的亂碼問題 <br>
 https://www.raspberrypi.com.tw/10842/raspberry-pi-3-uart-overlay-workaround/   <br>
 - RPi wi-fi 設定: 
@@ -167,7 +167,8 @@ vi config.js</pre>
 - 利用 NodeRed 建立 Dialog Flow <br>
 
 ##### step1. 建立SenseID (本機端)(若已先建立完成，此步驟可跳過)  
-<img border="0" height="280" src="https://1.bp.blogspot.com/-sRvGIpSbUco/VxDKjwysmYI/AAAAAAAAAFI/cPUm08OVAac8MxFeTb0pp-yJbIQA1GCdwCLcB/s320/HUMIX-NG%2B-%2Bsense.png" width="400" /> <br>
+
+<img border="0" height="280" src="https://1.bp.blogspot.com/-sRvGIpSbUco/VxDKjwysmYI/AAAAAAAAAFI/cPUm08OVAac8MxFeTb0pp-yJbIQA1GCdwCLcB/s1600/HUMIX-NG%2B-%2Bsense.png" width="400" /> <br>
 
 ##### step2. 到"Think"開始佈署dialog flow(本機端)
 <img border="0" height="280" src="https://1.bp.blogspot.com/-fyUmo5YMzWE/VxDKqkSGNkI/AAAAAAAAAFY/vXl3u-7lm_kD3RdnNih-U2BN9hy8PwzOgCLcB/s320/HUMIX-NG%2B-%2Bdialog.png" width="400" /> <br>
