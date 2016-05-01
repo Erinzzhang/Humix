@@ -91,8 +91,8 @@ e. 確認剛剛建立的"humix-think"可以運作 <br>
 
 成功將humix的"大腦"(app)送到bluemix平台之後，接著就是在RPi 3登場的時刻！<br>
 
-## 2.   Humix Sense設定 <br>
-- Enable Humix Sense <br>
-    ##### step1. 下載並解壓縮"humix.img"至SD card (RPi 3) <br>
+## 2.   Humix Sense設定 
+-Enable Humix Sense <br>
+##### step1. 下載並解壓縮"humix.img"至SD card (RPi 3) <br>
 下載humix的映像檔，並解壓縮燒錄至 SD card 中(映像檔包含RPi 3的作業系統Raspbian Jessie、humix-ng) <br>
 下載地址：[humix.img](http://119.81.185.45/humix_image/20160330-humix-jessie-alpha.img.gz)
